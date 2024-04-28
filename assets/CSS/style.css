@@ -1,0 +1,177 @@
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  background-color: #0d0d0d;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+aside {
+  left: -250px;
+}
+aside > div:nth-child(1) {
+  width: 250px;
+  /* max-width: 400px; */
+  background-color: #0d0d0d;
+}
+aside ul {
+  position: relative;
+  overflow: hidden;
+}
+aside ul li {
+  position: relative;
+  bottom: -100%;
+  width: fit-content;
+  cursor: pointer;
+}
+aside ul a {
+  color: white;
+}
+
+aside > div:nth-child(2) img {
+  width: 50px;
+}
+aside i {
+  cursor: pointer;
+}
+aside > div:nth-child(2) > div:nth-child(2) {
+  width: fit-content;
+}
+/*******************************************************************************************************************/
+.loading {
+  justify-content: center;
+  align-items: center;
+  z-index: 100000;
+}
+.lds-ring,
+.lds-ring div {
+  box-sizing: border-box;
+}
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid currentColor;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: currentColor transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*******************************************************************************************************************/
+main section {
+  min-height: 100vh;
+}
+.meal {
+  cursor: pointer;
+  overflow: hidden;
+}
+.meal:hover div {
+  transform: translateY(0%);
+}
+.meal img {
+  object-fit: cover;
+  width: 100%;
+}
+.meal div {
+  transform: translateY(100%);
+  display: flex;
+  align-items: center;
+  inset: 0;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.7);
+  transition: 0.5s;
+}
+/*******************************************************************************************************************/
+.description ul li {
+  margin: 0;
+}
+/*******************************************************************************************************************/
+.search-page-form input::placeholder {
+  color: gray;
+}
+/*******************************************************************************************************************/
+.single-category {
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+.single-category:hover div {
+  transform: translateY(0%);
+}
+.single-category div {
+  position: absolute;
+  transform: translateY(125%);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  inset: 0;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.7);
+  transition: 0.5s;
+  height: 100%;
+}
+.single-category div p {
+  text-align: center;
+  line-height: 1.3;
+  width: 100%;
+}
+@media (max-width: 992px) {
+  .single-category div {
+    font-size: 11px;
+  }
+}
+@media (max-width: 768px) {
+  .single-category div {
+    font-size: 19px;
+  }
+}
+/*******************************************************************************************************************/
+.single-area {
+  cursor: pointer;
+}
+/*******************************************************************************************************************/
+.one-ingredient {
+  cursor: pointer;
+}
+/*******************************************************************************************************************/
+
+.btn-outline-danger {
+  width: fit-content;
+}
+.container-down {
+  max-width: 80%;
+}
+.container-down form input {
+  max-width: 500px;
+}
